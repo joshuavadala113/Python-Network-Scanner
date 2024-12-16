@@ -1,10 +1,3 @@
-Sure! Here's the updated **`README.md`** file without the MIT license section.
-
----
-
-### **`README.md`**
-
-```markdown
 # **Network Vulnerability Scanner**
 
 ## **Overview**  
@@ -34,23 +27,16 @@ Install the required Python libraries using the `requirements.txt` file:
 pip install -r requirements.txt
 ```
 
----
+## **How to Use**
+1.  Run the scanner with a target IP or domain:
+    ```bash
+    python scanner.py --target <TARGET_IP_OR_DOMAIN> --ports <PORT_RANGE>
+    ```  
+2.  To include web vulnerability scanning:
+    ```bash
+    python scanner.py --target <TARGET_DOMAIN> --ports <PORT_RANGE> --web
+    ```
+3.  View the reports in the `reports` directory.
 
-## **How to Use**  
-1. Run the scanner with a target IP or domain:
-   ```bash
-   python scanner.py --target <TARGET_IP_OR_DOMAIN> --ports <PORT_RANGE>
-   ```
-2. To include web vulnerability scanning:
-   ```bash
-   python scanner.py --target <TARGET_DOMAIN> --ports <PORT_RANGE> --web
-   ```
-3. View the report in the `reports` directory.
-
----
-
-## **Disclaimer**  
-**Use responsibly and only with authorization.** Unauthorized scanning may be illegal.
-```
-
----
+## **WARNING**
+**Use responsibly and only with authorization**. Unauthorized scanning, penetration testing, or vulnerability scanning without permission may be illegal and could result in legal consequences. Always have explicit permission from the network or system owner before running any scanning tools.
