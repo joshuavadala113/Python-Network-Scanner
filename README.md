@@ -53,7 +53,7 @@ pip install -r requirements.txt
 ### **Setup**  
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/joshuavadala113/network-vuln-scanner.git
+   git clone https://github.com/joshuavadala113/Python-Network-Scanner.git
    cd network-vuln-scanner
    ```  
 
