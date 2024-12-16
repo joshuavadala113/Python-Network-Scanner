@@ -1,48 +1,32 @@
+Sure! Here's the updated **`README.md`** file without the MIT license section.
 
+---
 
+### **`README.md`**
+
+```markdown
 # **Network Vulnerability Scanner**
 
 ## **Overview**  
-The **Network Vulnerability Scanner** is a Python-based tool designed to detect vulnerabilities in networks and web applications. It performs an in-depth analysis of target systems, including scanning for open ports, identifying running services, cross-referencing known vulnerabilities (CVEs), and evaluating web security configurations. The tool aims to provide actionable insights to improve network and web application security. A detailed report is generated after each scan, summarizing the findings and highlighting potential risks.
-
-This tool is ideal for cybersecurity professionals, penetration testers, and IT administrators looking for a lightweight and customizable vulnerability scanner.
+The **Network Vulnerability Scanner** is a Python-based tool designed to detect vulnerabilities in networks and web applications. It scans for open ports, identifies running services, checks for known vulnerabilities using CVEs, and evaluates basic web security configurations. A detailed report is generated after every scan.
 
 ---
 
 ## **Features**  
-1. **Port Scanning**:  
-   - Scans a range of ports to identify open ones.
-   - Provides details about commonly used ports for quick analysis.
-
-2. **Service Detection**:  
-   - Identifies services running on detected open ports (e.g., HTTP, SSH).  
-   - Extracts service versions for additional insights.  
-
-3. **Vulnerability Checking**:  
-   - Maps detected services and versions to known vulnerabilities using CVE data.  
-   - Cross-references data from reliable vulnerability databases like Vulners.  
-
-4. **Web Vulnerability Testing**:  
-   - Evaluates web servers for missing HTTP headers such as `Strict-Transport-Security` and `Content-Security-Policy`.  
-   - Analyzes SSL/TLS configurations for deprecated protocols and weak ciphers.  
-
-5. **Comprehensive Reporting**:  
-   - Outputs findings into a structured, easy-to-read text report.  
-   - Highlights critical vulnerabilities, open ports, and misconfigurations.  
-
-6. **Extensibility**:  
-   - Modular code structure allows users to customize or extend specific functionality.  
-   - Ideal for developers who want to integrate additional features.  
+1. **Port Scanning**: Scans a range of ports to identify open ports.  
+2. **Service Detection**: Identifies services running on the detected open ports.  
+3. **Vulnerability Checking**: Maps services to known vulnerabilities using CVE data.  
+4. **Web Vulnerability Testing**: Checks for missing HTTP security headers and outdated SSL/TLS configurations.  
+5. **Comprehensive Reporting**: Creates a detailed report of the findings in a text file.  
 
 ---
 
 ## **Getting Started**  
 
 ### **Requirements**  
-To ensure compatibility, ensure you have the following:  
 - Python 3.8 or higher  
-- Compatible Operating System (Linux, Windows, macOS)  
-- Active Internet connection (required for CVE lookups and web vulnerability checks)  
+- Operating System: Linux, Windows, or macOS  
+- Active Internet connection (for vulnerability checks and web scans)  
 
 ### **Dependencies**  
 Install the required Python libraries using the `requirements.txt` file:  
@@ -50,37 +34,23 @@ Install the required Python libraries using the `requirements.txt` file:
 pip install -r requirements.txt
 ```
 
-### **Setup**  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/joshuavadala113/Python-Network-Scanner.git
-   cd network-vuln-scanner
-   ```  
+---
 
-2. Install the dependencies:  
+## **How to Use**  
+1. Run the scanner with a target IP or domain:
    ```bash
-   pip install -r requirements.txt
+   python scanner.py --target <TARGET_IP_OR_DOMAIN> --ports <PORT_RANGE>
    ```
-
-3. Test the installation by running a sample scan:  
+2. To include web vulnerability scanning:
    ```bash
-   python scanner.py --target localhost --ports 1-1024
+   python scanner.py --target <TARGET_DOMAIN> --ports <PORT_RANGE> --web
    ```
-
-### **Command-Line Arguments**  
-The scanner supports the following arguments for flexible usage:  
-| Argument          | Description                                          | Example                          |  
-|-------------------|------------------------------------------------------|----------------------------------|  
-| `--target`        | Specify the target IP address or domain              | `--target 192.168.1.1`           |  
-| `--ports`         | Define the port range to scan                        | `--ports 1-65535`                |  
-| `--web`           | Enable web vulnerability scanning                   | `--web`                          |  
-| `--output`        | Specify the output file for the report               | `--output results.txt`           |  
+3. View the report in the `reports` directory.
 
 ---
 
-## **Additional Notes**  
-- **Target Scope**: Ensure you have explicit permission to scan the target system. Unauthorized scanning can violate laws and organizational policies.  
-- **Performance**: For large port ranges or multiple scans, ensure sufficient system resources are available to avoid delays.  
-- **Customization**: Advanced users can modify the scripts to include additional scanning modules or extend existing features.
+## **Disclaimer**  
+**Use responsibly and only with authorization.** Unauthorized scanning may be illegal.
+```
 
 ---
